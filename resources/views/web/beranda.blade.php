@@ -108,7 +108,7 @@
                     <div class="col-lg-12">
                         <div class="navigation">
                             <nav class="navbar navbar-expand-lg navbar-light ">
-                                <a class="navbar-brand" href="index.html"><img src="assets/images/120x120.png" alt="" width="90" height="90"></a> <!-- logo -->
+                                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="" width="90" height="90"></a> <!-- logo -->
                                 <a class="navbar-brand-2" href="index.html"><img src="assets/images/kampung-pesilat.png" alt="" width="90" height="90"></a> <!-- logo -->
                                 <span class="side-menu__toggler"><i class="fa fa-bars"></i></span><!-- /.side-menu__toggler -->
                                                                   
