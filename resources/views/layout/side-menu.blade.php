@@ -10,63 +10,102 @@
         <!-- BEGIN: Side Menu -->
         <nav class="side-nav">
             <a href="" class="intro-x flex items-center pl-5 pt-4">
-                <img alt="Midone Laravel Admin Dashboard Starter Kit" class="w-6" src="{{ asset('dist/images/logo.svg') }}">
-                <span class="hidden xl:block text-white text-lg ml-3 font-medium">Midone</span>
+                <img alt="Logo" class="w-1/4" src="{{ asset('assets/images/logo.png') }}">
+                <span class="hidden xl:block text-white text-lg ml-3"> Portal <span class="font-medium">SPBE</span> </span>
             </a>
             <div class="side-nav__devider my-6"></div>
             <ul>
-                @foreach ($side_menu as $menu)
-                    @if ($menu == 'devider')
-                        <li class="side-nav__devider my-6"></li>
-                    @else
+                <li>
+                    <a href="index.html" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-feather="home"></i> </div>
+                        <div class="side-menu__title"> Dashboard </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-inbox.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
+                        <div class="side-menu__title"> Inbox </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-post.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-feather="file-text"></i> </div>
+                        <div class="side-menu__title"> Post </div>
+                    </a>
+                </li>
+                <li class="side-nav__devider my-6"></li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
+                        <div class="side-menu__title"> Crud <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
                         <li>
-                            <a href="{{ isset($menu['layout']) ? route('page', ['layout' => $menu['layout'], 'pageName' => $menu['page_name']]) : 'javascript:;' }}" class="{{ $first_page_name == $menu['page_name'] ? 'side-menu side-menu--active' : 'side-menu' }}">
-                                <div class="side-menu__icon">
-                                    <i data-feather="{{ $menu['icon'] }}"></i>
-                                </div>
-                                <div class="side-menu__title">
-                                    {{ $menu['title'] }}
-                                    @if (isset($menu['sub_menu']))
-                                        <i data-feather="chevron-down" class="side-menu__sub-icon"></i>
-                                    @endif
-                                </div>
+                            <a href="side-menu-crud-data-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Data List </div>
                             </a>
-                            @if (isset($menu['sub_menu']))
-                                <ul class="{{ $first_page_name == $menu['page_name'] ? 'side-menu__sub-open' : '' }}">
-                                    @foreach ($menu['sub_menu'] as $subMenu)
-                                        <li>
-                                            <a href="{{ isset($subMenu['layout']) ? route('page', ['layout' => $subMenu['layout'], 'pageName' => $subMenu['page_name']]) : 'javascript:;' }}" class="{{ $second_page_name == $subMenu['page_name'] ? 'side-menu side-menu--active' : 'side-menu' }}">
-                                                <div class="side-menu__icon">
-                                                    <i data-feather="activity"></i>
-                                                </div>
-                                                <div class="side-menu__title">
-                                                    {{ $subMenu['title'] }}
-                                                    @if (isset($subMenu['sub_menu']))
-                                                        <i data-feather="chevron-down" class="side-menu__sub-icon"></i>
-                                                    @endif
-                                                </div>
-                                            </a>
-                                            @if (isset($subMenu['sub_menu']))
-                                                <ul class="{{ $second_page_name == $subMenu['page_name'] ? 'side-menu__sub-open' : '' }}">
-                                                    @foreach ($subMenu['sub_menu'] as $lastSubMenu)
-                                                        <li>
-                                                            <a href="{{ isset($lastSubMenu['layout']) ? route('page', ['layout' => $lastSubMenu['layout'], 'pageName' => $lastSubMenu['page_name']]) : 'javascript:;' }}" class="{{ $third_page_name == $lastSubMenu['page_name'] ? 'side-menu side-menu--active' : 'side-menu' }}">
-                                                                <div class="side-menu__icon">
-                                                                    <i data-feather="zap"></i>
-                                                                </div>
-                                                                <div class="side-menu__title">{{ $lastSubMenu['title'] }}</div>
-                                                            </a>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            @endif
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            @endif
                         </li>
-                    @endif
-                @endforeach
+                        <li>
+                            <a href="side-menu-crud-form.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Form </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="side-menu__title"> Users <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="side-menu-users-layout-1.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Layout 1 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-users-layout-2.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Layout 2 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-users-layout-3.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Layout 3 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-feather="trello"></i> </div>
+                        <div class="side-menu__title"> Profile <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="side-menu-profile-overview-1.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Overview 1 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-profile-overview-2.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Overview 2 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-profile-overview-3.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title"> Overview 3 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- END: Side Menu -->

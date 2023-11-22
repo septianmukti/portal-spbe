@@ -85,11 +85,7 @@ class AuthController extends Controller
             return redirect()->route('home')
                 ->withSuccess('Anda berhasil Login!');
         }
-
-        return back()->withErrors([
-            'email' => 'Akun yang anda masukkan tidak terdaftar.',
-        ])->onlyInput('email');
-
+        return back()->with(['error' => 'Akun yang anda masukkan tidak terdaftar !']);
     }
 
     /**

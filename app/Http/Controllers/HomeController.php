@@ -16,12 +16,8 @@ class HomeController extends Controller
     {
         if(Auth::check())
         {
-            return view('auth.home');
+            return view('pages.dashboard');
         }
-        
-        return redirect()->route('login')
-            ->withErrors([
-            'email' => 'Silahkan login terlebih dahulu!',
-        ])->onlyInput('email');
+        return redirect()->route('login')->with(['error' => 'Silahkan login terlebih dahulu !']);
     } 
 }
