@@ -63,7 +63,7 @@ class AuthController extends Controller
         Auth::attempt($credentials);
         $request->session()->regenerate();
         return redirect()->route('home')
-        ->withSuccess('User baru telah berhasil ditambahkan!');
+            ->withSuccess('User baru telah berhasil ditambahkan!');
     }
 
     /**
@@ -79,8 +79,7 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials))
-        {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->route('home')
                 ->withSuccess('Anda berhasil Login!');
@@ -102,5 +101,4 @@ class AuthController extends Controller
         return redirect()->route('login')
             ->withSuccess('Anda berhasil Logout!');;
     }
-
 }

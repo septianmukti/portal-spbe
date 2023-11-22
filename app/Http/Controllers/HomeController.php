@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
         if(Auth::check())
         {
-            return view('pages.dashboard');
+            return view('pages.home');
         }
         return redirect()->route('login')->with(['error' => 'Silahkan login terlebih dahulu !']);
     } 

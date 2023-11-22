@@ -1,7 +1,7 @@
 @extends('../layout/side-menu')
 
 @section('subhead')
-    <title>Dashboard - Midone - Laravel Admin Dashboard Starter Kit</title>
+    <title>Home - Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
 @endsection
 
 @section('subcontent')

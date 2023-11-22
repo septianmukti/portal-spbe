@@ -25,13 +25,13 @@ Route::controller(WebController::class)->group(function () {
 Route::controller(AuthController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
     Route::post('/login', 'authenticate')->name('authenticate');
+    Route::post('/logout', 'logout')->name('logout');
 });
 
 Route::middleware(['auth'])->group(function () {
     Route::controller(AuthController::class)->group(function () {
         Route::get('/register', 'register')->name('register');
         Route::post('/register', 'store')->name('store');
-        Route::post('/logout', 'logout')->name('logout');
     });
     Route::get('/home', [HomeController::class, 'home'])->name('home');
 });
