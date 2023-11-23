@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/register', 'register')->name('register');
         Route::post('/register', 'store')->name('store');
     });
+    
     Route::get('/home', [HomeController::class, 'home'])->name('home');
+
+    Route::controller(ProfileController::class)->group(function () {
+        Route::get('/profile', 'index')->name('profile');
+        Route::post('/profile/update', 'update')->name('update-profile');
+    });
 });
