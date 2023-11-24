@@ -38,7 +38,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
 
     Route::controller(ProfileController::class)->group(function () {
-        Route::get('/profile', 'index')->name('profile');
-        Route::post('/profile/update', 'update')->name('update-profile');
+        Route::get('/profile', 'viewprofile')->name('profile');
+        Route::put('/profile', 'updateprofile')->name('update-profile');
+        Route::get('/change-password', 'viewchangepassword')->name('change-password');
+        Route::put('/change-password', 'updatePassword')->name('update-password');
     });
 });
