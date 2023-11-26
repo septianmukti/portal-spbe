@@ -26,19 +26,25 @@
                     <form action="{{route('update-password')}}" method="POST">
                         @csrf
                         @method('PUT')
-                        <!-- error message untuk content
+                        <!-- Error message -->
+                        @if ($errors->any())
+                            @foreach ($errors->all() as $error)
+                                <div class="rounded-md flex items-center px-5 py-4 mb-2 bg-theme-31 text-theme-6"> <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i> {{ $error }} </div>
+                            @endforeach 
+                        @endif
                         @if (session('error'))
-                        <div class="rounded-md flex items-center px-5 py-4 mb-2 bg-theme-31 text-theme-6"> <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i> {{ session('error') }} </div>
+                            <div class="rounded-md flex items-center px-5 py-4 mb-2 bg-theme-31 text-theme-6"> <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i> {{ session('error') }} </div>
                         @elseif (session('success'))
-                        <div class="rounded-md flex items-center px-5 py-4 mb-2 bg-theme-18 text-theme-9"> <i data-feather="alert-circle" class="w-6 h-6 mr-2"></i> {{ session('success') }} </div>
-                        @endif -->
+                            <div class="rounded-md flex items-center px-5 py-4 mb-2 bg-theme-18 text-theme-9"> <i data-feather="alert-circle" class="w-6 h-6 mr-2"></i> {{ session('success') }} </div>
+                        @endif
+                        <!-- End error message -->
                         <div>
                             <label>Password Lama</label>
-                            <input type="password" id="old_pasword" name="old_password" class="input w-full border mt-2" placeholder="Masukkan Password Lama" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
+                            <input type="password" id="old_password" name="old_password" class="input w-full border mt-2" placeholder="Masukkan Password Lama" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
                         </div>
                         <div class="mt-3">
                             <label>Password Baru</label>
-                            <input type="password" id="new_pasword" name="new_pasword" class="input w-full border mt-2" placeholder="Masukkan Password Baru" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
+                            <input type="password" id="new_password" name="new_password" class="input w-full border mt-2" placeholder="Masukkan Password Baru" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
                         </div>
                         <div class="mt-3">
                             <label>Konfirmasi Password Baru</label>

@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a dashboard to authenticated users.
      *
@@ -14,10 +19,6 @@ class HomeController extends Controller
      */
     public function home()
     {
-        if(Auth::check())
-        {
-            return view('pages.home');
-        }
-        return redirect()->route('login')->with(['error' => 'Silahkan login terlebih dahulu !']);
+        return view('pages.home');
     } 
 }

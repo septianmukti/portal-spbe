@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,13 +31,13 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::controller(AuthController::class)->group(function () {
-        Route::get('/register', 'register')->name('register');
-        Route::post('/register', 'store')->name('store');
+    Route::get('/home', [HomeController::class, 'home'])->name('home');
+    
+    Route::controller(AccountController::class)->group(function () {
+        Route::get('/register', 'viewRegister')->name('register');
+        Route::post('/register', 'registerUser')->name('register-user');
     });
     
-    Route::get('/home', [HomeController::class, 'home'])->name('home');
-
     Route::controller(ProfileController::class)->group(function () {
         Route::get('/profile', 'viewprofile')->name('profile');
         Route::put('/profile', 'updateprofile')->name('update-profile');

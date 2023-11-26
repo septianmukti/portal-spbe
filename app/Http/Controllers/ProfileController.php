@@ -47,7 +47,7 @@ class ProfileController extends Controller
     public function updatePassword(Request $request)
     {
         $messages = [
-            'min' => 'Password minimal berjumlah 8 karakter.',
+            'min' => 'Password baru minimal berjumlah 8 karakter.',
             'required_with' => ':attribute harus diisi, tidak boleh kosong.',
             'same' => 'Konfirmasi Password harus sama dengan Password yang baru.'
         ];
