@@ -44,11 +44,11 @@
                         </div>
                         <div class="mt-3">
                             <label>Password Baru</label>
-                            <input type="password" id="new_password" name="new_password" class="input w-full border mt-2" placeholder="Masukkan Password Baru" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
+                            <input type="text" id="new_password" name="new_password" class="input w-full border mt-2" placeholder="Masukkan Password Baru" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
                         </div>
                         <div class="mt-3">
                             <label>Konfirmasi Password Baru</label>
-                            <input type="password" id="new_confirm_password" name="new_confirm_password" class="input w-full border mt-2" placeholder="Masukkan Konfirmasi Password Baru" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
+                            <input type="text" id="new_confirm_password" name="new_confirm_password" class="input w-full border mt-2" placeholder="Masukkan Konfirmasi Password Baru" oninvalid="this.setCustomValidity('Form tidak boleh kosong.')" oninput="setCustomValidity('')" required>
                         </div>
                         <button type="submit" class="button bg-theme-1 text-white mt-4">Ganti Password</button>
                     </form>

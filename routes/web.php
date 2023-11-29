@@ -34,8 +34,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
     
     Route::controller(AccountController::class)->group(function () {
-        Route::get('/register', 'viewRegister')->name('register');
-        Route::post('/register', 'registerUser')->name('register-user');
+        Route::get('/account-management', 'viewAccountManagement')->name('account-management');
+        Route::get('/account-management/users/{id}', 'showAccount')->name('show-account');
+        Route::put('/account-management/change-account-password', 'changeAccountPassword')->name('change-account-password');
+        Route::delete('/account-management/delete/{id}', 'deleteAccount')->name('delete-account');
+        Route::post('/register-account', 'registerAccount')->name('register-account');
     });
     
     Route::controller(ProfileController::class)->group(function () {
