@@ -35,9 +35,9 @@
             <thead>
                 <tr>
                     <th class="border-b-2 text-center whitespace-no-wrap">NO.</th>
-                    <th class="border-b-2 whitespace-no-wrap">EMAIL AKUN</th>
-                    <th class="border-b-2 whitespace-no-wrap">NAMA AKUN</th>
-                    <th class="border-b-2 whitespace-no-wrap">TANGGAL DIBUAT</th>
+                    <th class="border-b-2 text-center whitespace-no-wrap">EMAIL AKUN</th>
+                    <th class="border-b-2 text-center whitespace-no-wrap">NAMA AKUN</th>
+                    <th class="border-b-2 text-center whitespace-no-wrap">TANGGAL DIBUAT</th>
                     <th class="border-b-2 text-center whitespace-no-wrap">AKSI</th>
                 </tr>
             </thead>
@@ -46,11 +46,11 @@
                 @foreach($users as $user)
                     <tr>
                         <td class="text-center border-b">{{ $no++ }}.</td>
-                        <td class="border-b">
+                        <td class="text-center border-b">
                             <div class="font-medium whitespace-no-wrap">{{$user->email}}</div>
                         </td>
-                        <td class="border-b">{{$user->name}}</td>
-                        <td class="border-b">{{$user->created_at->format('d-m-Y')}}</td>
+                        <td class="text-center border-b">{{$user->name}}</td>
+                        <td class="text-center border-b">{{$user->created_at->format('d-m-Y')}}</td>
                         <td class="border-b w-5">
                             <div class="flex sm:justify-center items-center">
                                 <a class="flex items-center mr-3 text-theme-1" id="show-user" href="javascript:;" data-url="{{ route('show-account', $user->id) }}">
@@ -145,7 +145,10 @@
                 <div class="text-3xl mt-5">Anda yakin?</div>
                 <div class="text-gray-600 mt-2">Apakah anda ingin menghapus akun ini? Akun yang telah dihapus tidak dapat dikembalikan.</div>
             </div>
-            <div class="px-5 pb-8 text-center"> <button type="button" data-dismiss="modal" class="button w-24 border text-gray-700 mr-1">Batal</button> <button type="button" class="button w-24 bg-theme-6 text-white">Hapus</button> </div>
+            <div class="px-5 pb-8 text-center">
+                <button type="button" data-dismiss="modal" class="button w-24 border text-gray-700 mr-1">Batal</button>
+                <button type="button" class="button w-24 bg-theme-6 text-white">Hapus</button>
+            </div>
         </div>
     </div>
     <!-- END: Delete Account Modal -->
