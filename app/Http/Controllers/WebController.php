@@ -11,9 +11,9 @@ class WebController extends Controller
         return view('web.beranda');
     }
 
-    public function blog()
+    public function newsLayout()
     {
-        return view('web.blog');
+        return view('web.news-layout');
     }
 
     public function single()

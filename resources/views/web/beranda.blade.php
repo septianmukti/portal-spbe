@@ -13,7 +13,7 @@
     <title>Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
     
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -41,6 +41,9 @@
     
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.css" rel="stylesheet">
+
   <style>
     .footer-new {
         padding-top: 100px;
@@ -108,14 +111,14 @@
                     <div class="col-lg-12">
                         <div class="navigation">
                             <nav class="navbar navbar-expand-lg navbar-light ">
-                                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="" width="90" height="90"></a> <!-- logo -->
-                                <a class="navbar-brand-2" href="index.html"><img src="assets/images/kampung-pesilat.png" alt="" width="90" height="90"></a> <!-- logo -->
+                                <a class="navbar-brand" href="{{route('index')}}"><img src="assets/images/logo.png" alt="" width="90" height="90"></a> <!-- logo -->
+                                <a class="navbar-brand-2" href="{{route('index')}}"><img src="assets/images/kampung-pesilat.png" alt="" width="90" height="90"></a> <!-- logo -->
                                 <span class="side-menu__toggler"><i class="fa fa-bars"></i></span><!-- /.side-menu__toggler -->
                                                                   
                                 <div class="collapse navbar-collapse sub-menu-bar main-nav__main-navigation" id="navbarSupportedContent">
                                     <ul class="navbar-nav m-auto main-nav__navigation-box">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Beranda</a>
+                                            <a class="nav-link" href="{{route('index')}}">Beranda</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Tentang SPBE</a>
@@ -136,7 +139,7 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#pricing">Informasi Terbaru</a>
+                                            <a class="nav-link" href="{{route('news-layout')}}">Berita</a>
                                         </li>
                                     </ul>
                                 </div> <!-- navbar collapse -->
@@ -324,30 +327,69 @@
     <section class="customers-area pt-120 pb-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="customers-thumb wow fadeInLeft" data-wow-duration="1500ms">
-                        <img src="assets/images/customers-thumb.png" alt="customers">
-                    </div>
+                <div class="col-lg-3">
+                    
                 </div>
-                <div class="col-lg-6 col-md-9">
+                <div class="col-lg-9 col-md-9">
                     <div class="section-title">
-                        <span>We do more for your world</span>
-                        <h3 class="title">Discover Tools For Your Repeat Customers</h3>
+                        <span>Dokumen Terkait SPBE</span>
+                        <h3 class="title">Kabupaten Madiun</h3>
                     </div>
                     <div class="customers-content">
-                        <div class="item">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make. </p>
-                        </div>
-                        <div class="item">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make. </p>
-                        </div>
-                        <div class="item">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make. </p>
-                        </div>
-                        <div class="item mt-35">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            <a class="main-btn mt-50" href="#">Discover More</a>
-                        </div>
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                </tr>
+                                <tr>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                </tr>
+                                <tr>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>Shad Decker</td>
+                                    <td>Regional Director</td>
+                                    <td>Edinburgh</td>
+                                    <td>51</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Bruce</td>
+                                    <td>Javascript Developer</td>
+                                    <td>Singapore</td>
+                                    <td>29</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                    <td>27</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -359,49 +401,6 @@
     </section>
     
     <!--====== CUSTOMERS PART ENDS ======-->
-
-    <!--====== COUNTER PART START ======-->
-    
-    <section class="counter-area pb-120">
-        <div class="container">
-            <div class="row justify-content-center mt-100">
-                <div class="col-lg-9">
-                    <div class="section-title text-center">
-                        <span>Data Aplikasi</span>
-                        <h3 class="title">PEMERINTAH KABUPATEN MADIUN</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-item text-center mt-30 wow fadeInUp animated" data-wow-duration="1000ms" data-wow-delay="0ms">
-                        <h3 class="title odometer" data-count="7024">00</h3>
-                        <span>Downloads</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-item text-center mt-30 item-2 wow fadeInUp animated" data-wow-duration="1000ms" data-wow-delay="100ms">
-                        <h3 class="title odometer"  data-count="6020">00</h3>
-                        <span>App Likes</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-item text-center mt-30 item-3 wow fadeInUp animated" data-wow-duration="1000ms" data-wow-delay="200ms">
-                        <h3 class="title odometer"  data-count="360">00</h3>
-                        <span>5 Star odometer</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-item text-center mt-30 item-4 wow fadeInUp animated" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <h3 class="title odometer"  data-count="200">00</h3>
-                        <span>app awards</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!--====== COUNTER PART ENDS ======-->
 
     <!--====== BLOG PART START ======-->
     
@@ -462,6 +461,9 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <a class="main-btn mt-60" href="{{route('news-layout')}}">Lihat Semua Berita</a>
+            </div>
         </div>
     </section>
     
@@ -474,32 +476,32 @@
             <div class="row brand-active">
                 <div class="col-lg-3">
                     <div class="brand-item">
-                        <a href="#"><img src="assets/images/brand.png" alt=""></a>
+                        <a href="#"><img src="assets/images/kampung-pesilat.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="brand-item">
-                        <a href="#"><img src="assets/images/brand.png" alt=""></a>
+                        <a href="#"><img src="assets/images/kampung-pesilat.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="brand-item">
-                        <a href="#"><img src="assets/images/brand.png" alt=""></a>
+                        <a href="#"><img src="assets/images/kampung-pesilat.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="brand-item">
-                        <a href="#"><img src="assets/images/brand.png" alt=""></a>
+                        <a href="#"><img src="assets/images/kampung-pesilat.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="brand-item">
-                        <a href="#"><img src="assets/images/brand.png" alt=""></a>
+                        <a href="#"><img src="assets/images/kampung-pesilat.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="brand-item">
-                        <a href="#"><img src="assets/images/brand.png" alt=""></a>
+                        <a href="#"><img src="assets/images/kampung-pesilat.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -513,10 +515,10 @@
     <section class="footer-area">
         <div class="container">
             <div class="row footer-new">
-                <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="col-lg-4 col-md-7 col-sm-9 mt-10">
                     <div class="footer-widget footer-widget-about">
-                        <a href="#"><img src="assets/images/logo-kominfo.png" alt="logo"></a>
-                        <p>Sistem Pemerintahan Berbasis Elektronik (SPBE).</p>
+                        <a href="https://diskominfo.madiunkab.go.id/" target="_blank"><img src="assets/images/logo-kominfo.png" alt="logo"></a>
+                        <p>Sistem Pemerintahan Berbasis Elektronik (SPBE)</p>
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -624,6 +626,10 @@
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
 
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.js"></script>
+    <script>
+        new DataTable('#example');
+    </script>
 </body>
 
 </html>

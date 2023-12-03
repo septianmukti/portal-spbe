@@ -2642,7 +2642,7 @@ p {
   position: relative;
   z-index: 10;
   padding-top: 112px;
-  padding-bottom: 203px; }
+  padding-bottom: 112px; }
   .blog-area::before {
     position: absolute;
     content: '';

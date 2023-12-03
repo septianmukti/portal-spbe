@@ -20,7 +20,7 @@ use App\Http\Controllers\AccountController;
 
 Route::controller(WebController::class)->group(function () {
     Route::get('/', 'index')->name('index');
-    Route::get('/blog', 'blog')->name('blog');
+    Route::get('/berita', 'newsLayout')->name('news-layout');
     Route::get('/blog-single', 'single')->name('single-blog');
 });
 
@@ -36,7 +36,7 @@ Route::middleware(['auth'])->group(function () {
     Route::controller(AccountController::class)->group(function () {
         Route::get('/account-management', 'viewAccountManagement')->name('account-management');
         Route::get('/account-management/users/{id}', 'showAccount')->name('show-account');
-        Route::put('/account-management/change-account-password', 'changeAccountPassword')->name('change-account-password');
+        Route::put('/account-management/change-account-password/{id}', 'changeAccountPassword')->name('change-account-password');
         Route::delete('/account-management/delete/{id}', 'deleteAccount')->name('delete-account');
         Route::post('/register-account', 'registerAccount')->name('register-account');
     });

@@ -81,10 +81,12 @@ class AccountController extends Controller
             ->withSuccess('User baru telah berhasil ditambahkan!');
     }
 
-    public function deleteAccount($id)
+    public function deleteAccount(Request $request)
     {
-        // fix this
+        $id= $request->id;
         $users = User::find($id);
-        return response()->json($users);
+        $users->delete();
+
+        return redirect()->route('account-management')->with('success', 'Akun user berhasil dihapus!');
     }
 }
