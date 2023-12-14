@@ -4,6 +4,10 @@
     @yield('subhead')
 @endsection
 
+@section('css')
+    @yield('custom-css')
+@endsection
+
 @section('content')
     @include('../layout/components/mobile-menu')
     <div class="flex">
@@ -16,21 +20,21 @@
             <div class="side-nav__devider my-6"></div>
             <ul>
                 <li>
-                    <a href="{{url('/home')}}" class="side-menu {{ request()->is('home') ? 'side-menu--active' : '' }}">
+                    <a href="{{route('home')}}" class="side-menu {{ request()->is('home') ? 'side-menu--active' : '' }}">
                         <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                         <div class="side-menu__title"> Home </div>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('#')}}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                        <div class="side-menu__title"> Menu 1 </div>
+                    <a href="{{route('news-list')}}" class="side-menu {{ request()->is('news-list') ? 'side-menu--active' : '' }}">
+                        <div class="side-menu__icon"> <i data-feather="file-text"></i> </div>
+                        <div class="side-menu__title"> Berita </div>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('#')}}" class="side-menu">
-                        <div class="side-menu__icon"> <i data-feather="file-text"></i> </div>
-                        <div class="side-menu__title"> Menu 2 </div>
+                    <a href="{{route('category')}}" class="side-menu {{ request()->is('category') ? 'side-menu--active' : '' }}">
+                        <div class="side-menu__icon"> <i data-feather="list"></i> </div>
+                        <div class="side-menu__title"> Kategori </div>
                     </a>
                 </li>
                 <li class="side-nav__devider my-6"></li>

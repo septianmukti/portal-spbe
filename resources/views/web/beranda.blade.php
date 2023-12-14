@@ -2,62 +2,102 @@
 <html lang="en">
 
 <head>
-   
+
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!--====== Title ======-->
     <title>Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
-    
+
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
+
     <!--====== Fontawesome css ======-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    
+
     <!--====== flaticon css ======-->
     <link rel="stylesheet" href="assets/css/flaticon.css">
-    
+
     <!--====== odometer css ======-->
     <link rel="stylesheet" href="assets/css/odometer.min.css">
-    
+
     <!--====== Magnific Popup css ======-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    
+
     <!--====== animate css ======-->
     <link rel="stylesheet" href="assets/css/animate.min.css">
-    
+
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="assets/css/slick.css">
-    
+
     <!--====== Default css ======-->
     <link rel="stylesheet" href="assets/css/default.css">
-    
+
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.css" rel="stylesheet">
 
-  <style>
-    .footer-new {
-        padding-top: 100px;
-        padding-bottom: 30px;
-    }
-    body::-webkit-scrollbar {
-        display: none;
-    }
-  </style>
-  
+    <style>
+        .footer-new {
+            padding-top: 100px;
+            padding-bottom: 30px;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        /* IE7 */
+        .categories-list {
+            display: flex;
+            flex-wrap: wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            justify-content: space-between;
+        }
+
+        .categories-list li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem;
+            border: 2px solid gray;
+            margin-right: 1rem;
+            border-radius: 5px;
+            min-width: 150px;
+            min-height: 100px;
+            margin: 10px;
+        }
+
+        .categories-list li:hover {
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .categories-list li img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+
 </head>
 
 <body>
-
     <!-- PRELOADER -->
     <div class="preloader">
         <div class="lds-ellipsis">
@@ -67,9 +107,8 @@
         </div>
     </div>
     <!-- END PRELOADER -->
-   
-    <!--====== side menu PART START ======-->
 
+    <!--====== side menu PART START ======-->
     <div class="side-menu__block">
         <div class="side-menu__block-overlay custom-cursor__overlay">
             <div class="cursor"></div>
@@ -77,11 +116,8 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
             <div class="side-menu__top justify-content-end">
-
                 <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/close.png" alt=""></a>
             </div><!-- /.side-menu__top -->
-
-
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
@@ -94,16 +130,13 @@
                     <a href="https://twitter.com/pemkab_madiun"><i class="fa fa-twitter" style="color:#1DA1F2"></i></a>
                     <a href="https://www.instagram.com/pemkabmadiun/"><i class="fa fa-instagram" style="color:#E4405F"></i></a>
                     <a href="https://www.youtube.com/channel/UCv2HWvm0mF1gHJ327SMhn1Q"><i class="fa fa-youtube" style="color:#FF0000"></i></a>
-                    
                 </div>
             </div><!-- /.side-menu__content -->
         </div><!-- /.side-menu__block-inner -->
     </div><!-- /.side-menu__block -->
-
     <!--====== side menu PART ends ======-->
 
     <!--====== HEADER PART START ======-->
-    
     <header id="home" class="header-area header-v1-area">
         <div class="header-nav">
             <div class="container">
@@ -114,7 +147,6 @@
                                 <a class="navbar-brand" href="{{route('index')}}"><img src="assets/images/logo.png" alt="" width="90" height="90"></a> <!-- logo -->
                                 <a class="navbar-brand-2" href="{{route('index')}}"><img src="assets/images/kampung-pesilat.png" alt="" width="90" height="90"></a> <!-- logo -->
                                 <span class="side-menu__toggler"><i class="fa fa-bars"></i></span><!-- /.side-menu__toggler -->
-                                                                  
                                 <div class="collapse navbar-collapse sub-menu-bar main-nav__main-navigation" id="navbarSupportedContent">
                                     <ul class="navbar-nav m-auto main-nav__navigation-box">
                                         <li class="nav-item active">
@@ -153,11 +185,9 @@
             </div>
         </div>
     </header>
-    
     <!--====== HEADER PART ENDS ======-->
-                                                                  
+
     <!--====== BANNER PART START ======-->
-    
     <section class="banner-area">
         <div class="container">
             <div class="banner-items">
@@ -182,11 +212,9 @@
         <div class="banner-circle-3"></div>
         <div class="banner-circle-4"></div>
     </section>
-    
     <!--====== BANNER PART ENDS ======-->
 
     <!--====== FEATURES PART START ======-->
-    
     <section id="features" class="features-area pt-35">
         <div class="container">
             <div class="row justify-content-center">
@@ -202,13 +230,13 @@
                     <div class="features-btn">
                         <ul class="nav nav-pills d-flex justify-content-between" id="pills-tab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html" >
+                                <a class="nav-link" href="index.html">
                                     <i class="flaticon-responsive"><img src="assets/images/features-shape.png" alt="shape"></i>
                                     <span>Administrasi</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"href="#pills-2">
+                                <a class="nav-link" href="#pills-2">
                                     <i class="flaticon-computer-graphic"><img src="assets/images/features-shape.png" alt="shape"></i>
                                     <span>Layanan Publik</span>
                                 </a>
@@ -226,7 +254,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false">
+                                <a data-target=".bd-example-modal-lg" data-toggle="modal" href="">
                                     <i class="flaticon-app-development"><img src="assets/images/features-shape.png" alt="shape"></i>
                                     <span>Perizinan</span>
                                 </a>
@@ -237,11 +265,93 @@
             </div>
         </div>
     </section>
-    
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Daftar Aplikasi Perizinan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                    <table id="app" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                </tr>
+                                <tr>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                </tr>
+                                <tr>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                </tr>
+                                <tr>
+                                    <td>Shad Decker</td>
+                                    <td>Regional Director</td>
+                                    <td>Edinburgh</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Bruce</td>
+                                    <td>Javascript Developer</td>
+                                    <td>Singapore</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--====== FEATURES PART ENDS ======-->
 
     <!--====== ABOUT PART START ======-->
-    
     <section class="about-area pb-100">
         <div class="container">
             <div class="row align-items-center">
@@ -268,11 +378,9 @@
             <img src="assets/images/about-shape.png" alt="shape">
         </div>
     </section>
-    
     <!--====== ABOUT PART ENDS ======-->
 
     <!--====== BUSINESS PART START ======-->
-    
     <section class="business-area pt-110 pb-120">
         <div class="container">
             <div class="row">
@@ -319,30 +427,29 @@
         </div>
         <div class="business-shape"></div>
     </section>
-    
     <!--====== BUSINESS PART ENDS ======-->
 
     <!--====== CUSTOMERS PART START ======-->
-    
     <section class="customers-area pt-120 pb-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    
+                <div class="col-lg-5">
+                    <div class="customers-thumb wow fadeInLeft mt-150" data-wow-duration="1500ms">
+                        <img src="assets/images/document-search.svg" alt="list" width="500px" height="500px">
+                    </div>
                 </div>
-                <div class="col-lg-9 col-md-9">
+                <div class="col-lg-7 col-md-9">
                     <div class="section-title">
-                        <span>Dokumen Terkait SPBE</span>
+                        <span>Dokumen SPBE</span>
                         <h3 class="title">Kabupaten Madiun</h3>
                     </div>
                     <div class="customers-content">
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table id="search" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Name</th>
                                     <th>Position</th>
                                     <th>Office</th>
-                                    <th>Age</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -350,43 +457,56 @@
                                     <td>Tiger Nixon</td>
                                     <td>System Architect</td>
                                     <td>Edinburgh</td>
-                                    <td>61</td>
                                 </tr>
                                 <tr>
                                     <td>Garrett Winters</td>
                                     <td>Accountant</td>
                                     <td>Tokyo</td>
-                                    <td>63</td>
                                 </tr>
                                 <tr>
                                     <td>Ashton Cox</td>
                                     <td>Junior Technical Author</td>
                                     <td>San Francisco</td>
-                                    <td>66</td>
                                 </tr>
                                 <tr>
                                     <td>Cedric Kelly</td>
                                     <td>Senior Javascript Developer</td>
                                     <td>Edinburgh</td>
-                                    <td>22</td>
                                 </tr>
                                 <tr>
                                     <td>Shad Decker</td>
                                     <td>Regional Director</td>
                                     <td>Edinburgh</td>
-                                    <td>51</td>
                                 </tr>
                                 <tr>
                                     <td>Michael Bruce</td>
                                     <td>Javascript Developer</td>
                                     <td>Singapore</td>
-                                    <td>29</td>
                                 </tr>
                                 <tr>
                                     <td>Donna Snider</td>
                                     <td>Customer Support</td>
                                     <td>New York</td>
-                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -399,11 +519,9 @@
         </div>
         <div class="customers-shape-1"></div>
     </section>
-    
     <!--====== CUSTOMERS PART ENDS ======-->
 
     <!--====== BLOG PART START ======-->
-    
     <section id="news" class="blog-area">
         <div class="container">
             <div class="row justify-content-center">
@@ -466,11 +584,9 @@
             </div>
         </div>
     </section>
-    
     <!--====== BLOG PART ENDS ======-->
 
     <!--====== BRAND PART START ======-->
-    
     <div class="brand-area pt-120 pb-120">
         <div class="container">
             <div class="row brand-active">
@@ -507,11 +623,9 @@
             </div>
         </div>
     </div>
-    
     <!--====== BRAND PART ENDS ======-->
 
     <!--====== FOOTER PART START ======-->
-    
     <section class="footer-area">
         <div class="container">
             <div class="row footer-new">
@@ -555,12 +669,12 @@
                     <div class="footer-widget footer-widget-list">
                         <div class="list-item d-flex">
                             <div class="item mr-10">
-                            <h3 class="title">Hubungi kami</h3>
-                            <ul>
-                                <li><span><i class="fa fa-phone-square"></i> 0351-462927</span></li>
-                                <li><span><i class="fa fa-envelope"></i> diskominfo@madiunkab.go.id</span></li>
-                                <li><span><i class="fa fa-map-marker"></i> Jl. Mastrip No. 23 Madiun</span></li>
-                            </ul>
+                                <h3 class="title">Hubungi kami</h3>
+                                <ul>
+                                    <li><span><i class="fa fa-phone-square"></i> 0351-462927</span></li>
+                                    <li><span><i class="fa fa-envelope"></i> diskominfo@madiunkab.go.id</span></li>
+                                    <li><span><i class="fa fa-map-marker"></i> Jl. Mastrip No. 23 Madiun</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -575,11 +689,9 @@
             </div>
         </div>
     </section>
-    
     <!--====== FOOTER PART ENDS ======-->
-    
+
     <!--====== GO TO TOP PART START ======-->
-    
     <div class="go-top-area">
         <div class="go-top-wrap">
             <div class="go-top-btn-wrap">
@@ -590,13 +702,7 @@
             </div>
         </div>
     </div>
-    
     <!--====== GO TO TOP PART ENDS ======-->
-    
-
-
-
-
 
     <!--====== jquery js ======-->
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
@@ -605,30 +711,31 @@
     <!--====== Bootstrap js ======-->
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    
+
     <!--====== Slick js ======-->
     <script src="assets/js/slick.min.js"></script>
-    
+
     <!--====== wow js ======-->
     <script src="assets/js/wow.js"></script>
 
     <!--====== Scrolling Nav js ======-->
     <script src="assets/js/scrolling-nav.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>
-    
+
     <!--====== odometer js ======-->
     <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/jquery.appear.min.js"></script>
-    
+
     <!--====== Magnific Popup js ======-->
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    
+
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
 
     <script src="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.js"></script>
     <script>
-        new DataTable('#example');
+        new DataTable('#search');
+        new DataTable('#app');
     </script>
 </body>
 

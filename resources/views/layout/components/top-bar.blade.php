@@ -10,7 +10,7 @@
             <div class="dropdown-box__content box bg-theme-38 text-white">
                 <div class="p-4 border-b border-theme-40">
                     <div class="font-medium">{{ Auth::user()->name }}</div>
-                    <div class="text-xs text-theme-41">Admin</div>
+                    <div class="text-xs text-theme-41">{{ Auth::user()->email }}</div>
                 </div>
                 <div class="p-2">
                     <a href="{{url('/profile')}}" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>

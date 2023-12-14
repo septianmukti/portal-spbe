@@ -14,15 +14,15 @@
             </a>
         </li>
         <li>
-            <a href="{{url('#')}}" class="menu">
-                <div class="menu__icon"> <i data-feather="inbox"></i> </div>
-                <div class="menu__title"> Menu 1 </div>
+            <a href="{{url('news-list')}}" class="menu">
+                <div class="menu__icon"> <i data-feather="file-text"></i> </div>
+                <div class="menu__title"> Berita </div>
             </a>
         </li>
         <li>
-            <a href="{{url('#')}}" class="menu">
-                <div class="menu__icon"> <i data-feather="file-text"></i> </div>
-                <div class="menu__title"> Menu 2 </div>
+            <a href="{{url('news-list')}}" class="menu">
+                <div class="menu__icon"> <i data-feather="list"></i> </div>
+                <div class="menu__title"> Kategori </div>
             </a>
         </li>
         <li class="menu__devider my-6"></li>

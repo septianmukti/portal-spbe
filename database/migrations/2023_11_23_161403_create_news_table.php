@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('content');
-            $table->string('images')->nullable();
-            $table->timestamp('date_publised');
+            $table->string('images');
             $table->string('slug')->unique();
-            $table->foreignId('category_id');
+            $table->string('status');
+            $table->foreignId('categories_id');
             $table->timestamps();
         });
 

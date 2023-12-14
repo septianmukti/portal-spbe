@@ -6,6 +6,8 @@ use App\Http\Controllers\WebController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,5 +48,18 @@ Route::middleware(['auth'])->group(function () {
         Route::put('/profile', 'updateprofile')->name('update-profile');
         Route::get('/change-password', 'viewchangepassword')->name('change-password');
         Route::put('/change-password', 'updatePassword')->name('update-password');
+    });
+
+    Route::controller(CategoryController::class)->group(function () {
+        Route::get('/category', 'category')->name('category');
+        Route::post('/category', 'categoryAdd')->name('category-add');
+        Route::delete('/category/delete/{id}', 'delete')->name('delete-category');
+        Route::put('/category/edit/{id}', 'update')->name('category-edit');
+    });
+
+    Route::controller(NewsController::class)->group(function () {
+        Route::get('/news-list', 'newsList')->name('news-list');
+        Route::get('/news-list/news-upload', 'newsUpload')->name('news-upload');
+        Route::post('/news-list/news-upload', 'newsUploadProcess')->name('news-upload-process');
     });
 });

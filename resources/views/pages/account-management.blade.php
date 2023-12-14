@@ -34,11 +34,11 @@
         <table class="table table-report table-report--bordered display datatable w-full">
             <thead>
                 <tr>
-                    <th class="border-b-2 text-center whitespace-no-wrap">NO.</th>
+                    <th class="border-b-2 text-center whitespace-no-wrap">NO</th>
                     <th class="border-b-2 text-center whitespace-no-wrap">EMAIL AKUN</th>
                     <th class="border-b-2 text-center whitespace-no-wrap">NAMA AKUN</th>
                     <th class="border-b-2 text-center whitespace-no-wrap">TANGGAL DIBUAT</th>
-                    <th class="border-b-2 text-center whitespace-no-wrap">AKSI</th>
+                    <th class="border-b-2 text-center whitespace-no-wrap">MENU</th>
                 </tr>
             </thead>
             <tbody>
