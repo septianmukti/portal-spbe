@@ -1,55 +1,13 @@
-<!doctype html>
-<html lang="en">
+@extends('../layout/web/main')
 
-<head>
-
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--====== Title ======-->
+@section('title')
     <title>Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
+@endsection
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <!--====== flaticon css ======-->
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-
-    <!--====== odometer css ======-->
-    <link rel="stylesheet" href="assets/css/odometer.min.css">
-
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-    <!--====== animate css ======-->
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="assets/css/slick.css">
-
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
-
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
-
+@section('css')
     <link href="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.css" rel="stylesheet">
 
     <style>
-        .footer-new {
-            padding-top: 100px;
-            padding-bottom: 30px;
-        }
-
         .clearfix:after {
             visibility: hidden;
             display: block;
@@ -58,8 +16,7 @@
             clear: both;
             height: 0;
         }
-
-        /* IE7 */
+        
         .categories-list {
             display: flex;
             flex-wrap: wrap;
@@ -94,98 +51,12 @@
             height: 30px;
         }
     </style>
+@endsection
 
-</head>
+@section('content')
+    @include('../layout/web/components/side-menu')
 
-<body>
-    <!-- PRELOADER -->
-    <div class="preloader">
-        <div class="lds-ellipsis">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <!-- END PRELOADER -->
-
-    <!--====== side menu PART START ======-->
-    <div class="side-menu__block">
-        <div class="side-menu__block-overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div><!-- /.side-menu__block-overlay -->
-        <div class="side-menu__block-inner ">
-            <div class="side-menu__top justify-content-end">
-                <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/close.png" alt=""></a>
-            </div><!-- /.side-menu__top -->
-            <nav class="mobile-nav__container">
-                <!-- content is loading via js -->
-            </nav>
-            <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
-            <div class="side-menu__content">
-                <p><b>Hubungi kami :</b></p>
-                <p><a href="mailto:diskominfo@madiunkab.go.id">diskominfo@madiunkab.go.id</a> <br> <a href="tel:0351-462927">0351-462927</a></p>
-                <div class="side-menu__social">
-                    <a href="https://www.facebook.com/pemkab.madiun/"><i class="fa fa-facebook" style="color:#4267B2"></i></a>
-                    <a href="https://twitter.com/pemkab_madiun"><i class="fa fa-twitter" style="color:#1DA1F2"></i></a>
-                    <a href="https://www.instagram.com/pemkabmadiun/"><i class="fa fa-instagram" style="color:#E4405F"></i></a>
-                    <a href="https://www.youtube.com/channel/UCv2HWvm0mF1gHJ327SMhn1Q"><i class="fa fa-youtube" style="color:#FF0000"></i></a>
-                </div>
-            </div><!-- /.side-menu__content -->
-        </div><!-- /.side-menu__block-inner -->
-    </div><!-- /.side-menu__block -->
-    <!--====== side menu PART ends ======-->
-
-    <!--====== HEADER PART START ======-->
-    <header id="home" class="header-area header-v1-area">
-        <div class="header-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="navigation">
-                            <nav class="navbar navbar-expand-lg navbar-light ">
-                                <a class="navbar-brand" href="{{route('index')}}"><img src="assets/images/logo.png" alt="" width="90" height="90"></a> <!-- logo -->
-                                <a class="navbar-brand-2" href="{{route('index')}}"><img src="assets/images/kampung-pesilat.png" alt="" width="90" height="90"></a> <!-- logo -->
-                                <span class="side-menu__toggler"><i class="fa fa-bars"></i></span><!-- /.side-menu__toggler -->
-                                <div class="collapse navbar-collapse sub-menu-bar main-nav__main-navigation" id="navbarSupportedContent">
-                                    <ul class="navbar-nav m-auto main-nav__navigation-box">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="{{route('index')}}">Beranda</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Tentang SPBE</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Regulasi</a></li>
-                                                <li><a href="#">SOP</a></li>
-                                                <li><a href="#">Agenda</a></li>
-                                                <li><a href="#">FAQ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Domain SPBE</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Kebijakan SPBE</a></li>
-                                                <li><a href="#">Tata Kelola SPBE</a></li>
-                                                <li><a href="#">Manajemen SPBE</a></li>
-                                                <li><a href="#">Layanan SPBE</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{route('news-layout')}}">Berita</a>
-                                        </li>
-                                    </ul>
-                                </div> <!-- navbar collapse -->
-                                <div class="navbar-btn d-none d-sm-flex">
-                                    <a class="main-btn" href="#">Apa itu SPBE ?</a>
-                                </div>
-                            </nav>
-                        </div> <!-- navigation -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--====== HEADER PART ENDS ======-->
+    @include('../layout/web/components/header')
 
     <!--====== BANNER PART START ======-->
     <section class="banner-area">
@@ -261,6 +132,42 @@
                             </li>
                         </ul>
                     </div>
+
+                    <div class="features-btn">
+                        <ul class="nav nav-pills d-flex justify-content-between" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    <i class="flaticon-responsive"><img src="assets/images/features-shape.png" alt="shape"></i>
+                                    <span>Administrasi</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pills-2">
+                                    <i class="flaticon-computer-graphic"><img src="assets/images/features-shape.png" alt="shape"></i>
+                                    <span>Layanan Publik</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">
+                                    <i class="flaticon-seo-and-web"><img src="assets/images/features-shape.png" alt="shape"></i>
+                                    <span>Pengaduan</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">
+                                    <i class="flaticon-development"><img src="assets/images/features-shape.png" alt="shape"></i>
+                                    <span>Statistik</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                    <i class="flaticon-app-development"><img src="assets/images/features-shape.png" alt="shape"></i>
+                                    <span>Perizinan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -625,118 +532,13 @@
     </div>
     <!--====== BRAND PART ENDS ======-->
 
-    <!--====== FOOTER PART START ======-->
-    <section class="footer-area">
-        <div class="container">
-            <div class="row footer-new">
-                <div class="col-lg-4 col-md-7 col-sm-9 mt-10">
-                    <div class="footer-widget footer-widget-about">
-                        <a href="https://diskominfo.madiunkab.go.id/" target="_blank"><img src="assets/images/logo-kominfo.png" alt="logo"></a>
-                        <p>Sistem Pemerintahan Berbasis Elektronik (SPBE)</p>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget footer-widget-list">
-                        <div class="list-item d-flex">
-                            <div class="item mr-80">
-                                <h3 class="title">Domain SPBE</h3>
-                                <ul>
-                                    <li><a href="#">Kebijakan SPBE</a></li>
-                                    <li><a href="#">Tata Kelola SPBE</a></li>
-                                    <li><a href="#">Manajemen SPBE</a></li>
-                                    <li><a href="#">Layanan SPBE</a></li>
-                                </ul>
-                            </div>
-                            <div class="item mr-100">
-                                <h3 class="title">Tautan Terkait</h3>
-                                <ul>
-                                    <li><a href="#">KemenPANRB</a></li>
-                                    <li><a href="#">Kemenkominfo</a></li>
-                                    <li><a href="#">Pemkab Madiun</a></li>
-                                    <li><a href="#">Diskominfo Madiun</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="footer-widget footer-widget-list">
-                        <div class="list-item d-flex">
-                            <div class="item mr-10">
-                                <h3 class="title">Hubungi kami</h3>
-                                <ul>
-                                    <li><span><i class="fa fa-phone-square"></i> 0351-462927</span></li>
-                                    <li><span><i class="fa fa-envelope"></i> diskominfo@madiunkab.go.id</span></li>
-                                    <li><span><i class="fa fa-map-marker"></i> Jl. Mastrip No. 23 Madiun</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-copyright text-center">
-                        <p>Copyright © 2023 Dinas Komunikasi dan Informatika Kabupaten Madiun</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== FOOTER PART ENDS ======-->
+    @include('../layout/web/components/footer')
 
-    <!--====== GO TO TOP PART START ======-->
-    <div class="go-top-area">
-        <div class="go-top-wrap">
-            <div class="go-top-btn-wrap">
-                <div class="go-top go-top-btn">
-                    <i class="fa fa-angle-double-up"></i>
-                    <i class="fa fa-angle-double-up"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--====== GO TO TOP PART ENDS ======-->
+@endsection
 
-    <!--====== jquery js ======-->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.5.1.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!--====== Slick js ======-->
-    <script src="assets/js/slick.min.js"></script>
-
-    <!--====== wow js ======-->
-    <script src="assets/js/wow.js"></script>
-
-    <!--====== Scrolling Nav js ======-->
-    <script src="assets/js/scrolling-nav.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-
-    <!--====== odometer js ======-->
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/jquery.appear.min.js"></script>
-
-    <!--====== Magnific Popup js ======-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
-
+@section('script')
     <script src="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.js"></script>
     <script>
-        new DataTable('#search');
-        new DataTable('#app');
+        new DataTable('#search, #app');
     </script>
-</body>
-
-</html>
+@endsection

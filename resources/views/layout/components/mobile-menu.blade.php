@@ -14,13 +14,13 @@
             </a>
         </li>
         <li>
-            <a href="{{url('news-list')}}" class="menu">
+            <a href="{{url('news-list')}}" class="menu {{ request()->is('news-list', 'news-list/news-upload') ? 'menu--active' : '' }}">
                 <div class="menu__icon"> <i data-feather="file-text"></i> </div>
                 <div class="menu__title"> Berita </div>
             </a>
         </li>
         <li>
-            <a href="{{url('news-list')}}" class="menu">
+            <a href="{{url('category')}}" class="menu {{ request()->is('category') ? 'menu--active' : '' }}">
                 <div class="menu__icon"> <i data-feather="list"></i> </div>
                 <div class="menu__title"> Kategori </div>
             </a>

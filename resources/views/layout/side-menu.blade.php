@@ -13,7 +13,7 @@
     <div class="flex">
         <!-- BEGIN: Side Menu -->
         <nav class="side-nav">
-            <a href="{{url('/home')}}" class="intro-x flex items-center pl-5 pt-4">
+            <a href="{{route('home')}}" class="intro-x flex items-center pl-5 pt-4">
                 <img alt="Logo" class="w-1/4" src="{{ asset('assets/images/logo.png') }}">
                 <span class="hidden xl:block text-white text-lg ml-3"> Portal <span class="font-medium">SPBE</span> </span>
             </a>
@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('news-list')}}" class="side-menu {{ request()->is('news-list') ? 'side-menu--active' : '' }}">
+                    <a href="{{route('news-list')}}" class="side-menu {{ request()->is('news-list', 'news-list/news-upload') ? 'side-menu--active' : '' }}">
                         <div class="side-menu__icon"> <i data-feather="file-text"></i> </div>
                         <div class="side-menu__title"> Berita </div>
                     </a>

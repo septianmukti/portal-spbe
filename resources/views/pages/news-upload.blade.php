@@ -5,7 +5,7 @@
 @endsection
 
 @section('custom-css')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="{{ asset('dist/css/quill.snow.css') }}" rel="stylesheet">
     <style>
         .center {
             display: block;
@@ -43,7 +43,7 @@
                                 <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Konten Berita
                             </div>
                             <div class="mt-5">
-                                <div id="editor" style="height: 250px;"></div>
+                                <div id="editor" style="height: 500px;"></div>
                             </div>
                         </div>
                         <div class="border border-gray-200 rounded-md p-5 mt-5">
@@ -106,23 +106,25 @@
 @endsection
 
 @section('script')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="{{ asset('dist/js/quill.min.js') }}"></script>
+    <script src="{{ asset('dist/js/image-resize.min.js') }}"></script>
     <!-- Initialize Quill editor -->
     <script>
-        var toolbarOptions = [
-            [{'font': []}, { 'header': [1, 2, 3, 4, 5, 6, false] }],
-            ['bold', 'italic', 'underline', 'strike'],
-            ['link', 'image', 'video'],
-            [{'list': 'ordered'}, { 'list': 'bullet' }, { 'align': [] }],
-            [{'color': []}, {'background': []}],
-            [{ 'indent': '-1'}, { 'indent': '+1' }],
-        ];
-
         var quill = new Quill('#editor', {
+            theme: 'snow',
             modules: {
-                toolbar: toolbarOptions
+                imageResize: {
+                    displaySize: true
+                },
+                toolbar:[
+                    [{'font': []}, { 'header': [1, 2, 3, 4, 5, 6, false] }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    ['link', 'image', 'video'],
+                    [{'list': 'ordered'}, { 'list': 'bullet' }, { 'align': [] }],
+                    [{'color': []}, {'background': []}],
+                    [{ 'indent': '-1'}, { 'indent': '+1' }],
+                ]
             },
-            theme: 'snow'
         });
     </script>
     <script>

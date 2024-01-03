@@ -136,7 +136,7 @@
                 @csrf
                 @method('DELETE')
                 <div class="p-5 text-center"> <i data-feather="x-circle" class="w-16 h-16 text-theme-6 mx-auto mt-3"></i>
-                    <input type="hidden" id="id" name="id" value="">
+                    <input type="hidden" id="ids" name="id" value="">
                     <div class="text-3xl mt-5">Anda yakin?</div>
                     <div class="text-gray-600 mt-2">Apakah anda yakin ingin menghapus kategori ini? Kategori yang dihapus tidak dapat dikembalikan.</div>
                 </div>
@@ -152,9 +152,13 @@
 
 @section('script')
     <script>
-        $('.hapus, .edit').click(function() {
+        $('.edit').click(function() {
             var id = $(this).data('id');
             $('#id').val(id);
+        });
+        $('.hapus').click(function() {
+            var id = $(this).data('id');
+            $('#ids').val(id);
         });
     </script>
 @endsection

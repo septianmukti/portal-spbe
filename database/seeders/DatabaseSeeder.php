@@ -3,9 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Categories;
 use Illuminate\Database\Seeder;
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,6 +26,13 @@ class DatabaseSeeder extends Seeder
             'name' => 'Diskominfo Kab. Madiun',
             'email' => 'diskominfo@madiunkab.go.id',
             'password' => bcrypt('Kominfo2024'),
+        ]);
+
+        Categories::create([
+            'name' => 'Berita',
+            'slug' => 'berita',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
 
     }
