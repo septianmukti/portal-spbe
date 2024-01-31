@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\LayananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,5 +62,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/news-list', 'newsList')->name('news-list');
         Route::get('/news-list/news-upload', 'newsUpload')->name('news-upload');
         Route::post('/news-list/news-upload', 'newsUploadProcess')->name('news-upload-process');
+    });
+
+    Route::controller(LayananController::class)->group(function () {
+        Route::get('/layanan', 'view')->name('layanan');
+        Route::post('/layanan/layanan-add', 'post')->name('layanan-upload');
+        Route::put('/layanan/layanan-edit/{id}', 'update')->name('layanan-update');
+        Route::delete('/layanan/delete/{id}', 'delete')->name('delete-category');
     });
 });

@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Categories;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Support\Carbon;
 
 class DatabaseSeeder extends Seeder
 {

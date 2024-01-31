@@ -26,44 +26,32 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('news-list')}}" class="side-menu {{ request()->is('news-list', 'news-list/news-upload') ? 'side-menu--active' : '' }}">
+                    <a href="javascript:;" class="side-menu {{ request()->is('news-list', 'news-list/news-upload', 'category') ? 'side-menu--active' : '' }}">
                         <div class="side-menu__icon"> <i data-feather="file-text"></i> </div>
-                        <div class="side-menu__title"> Berita </div>
+                        <div class="side-menu__title"> Berita <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
                     </a>
-                </li>
-                <li>
-                    <a href="{{route('category')}}" class="side-menu {{ request()->is('category') ? 'side-menu--active' : '' }}">
-                        <div class="side-menu__icon"> <i data-feather="list"></i> </div>
-                        <div class="side-menu__title"> Kategori </div>
-                    </a>
-                </li>
-                <li class="side-nav__devider my-6"></li>
-                <li>
-                    <a href="javascript:;" class="side-menu">
-                        <div class="side-menu__icon"> <i data-feather="users"></i> </div>
-                        <div class="side-menu__title"> Users <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
-                    </a>
-                    <ul class="">
+                    <ul class="{{ request()->is('news-list', 'news-list/news-upload', 'category') ? 'side-menu__sub-open' : '' }}">
                         <li>
-                            <a href="{{url('#')}}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="side-menu__title"> Submenu 1 </div>
+                            <a href="{{route('news-list')}}" class="side-menu {{ request()->is('news-list', 'news-list/news-upload') ? 'side-menu--active' : '' }}">
+                                <div class="side-menu__icon"> <i data-feather="minus"></i> </div>
+                                <div class="side-menu__title"> Semua Berita </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('#')}}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="side-menu__title"> Submenu 2 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{url('#')}}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="side-menu__title"> Submenu 3 </div>
+                            <a href="{{route('category')}}" class="side-menu {{ request()->is('category') ? 'side-menu--active' : '' }}">
+                                <div class="side-menu__icon"> <i data-feather="minus"></i> </div>
+                                <div class="side-menu__title"> Kategori Berita </div>
                             </a>
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="{{route('layanan')}}" class="side-menu {{ request()->is('layanan') ? 'side-menu--active' : '' }}">
+                        <div class="side-menu__icon"> <i data-feather="clipboard"></i> </div>
+                        <div class="side-menu__title"> Layanan </div>
+                    </a>
+                </li>
+                <li class="side-nav__devider my-6"></li>
             </ul>
         </nav>
         <!-- END: Side Menu -->

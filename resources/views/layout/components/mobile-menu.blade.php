@@ -8,50 +8,38 @@
     </div>
     <ul class="border-t border-theme-24 py-5 hidden">
         <li>
-            <a href="{{url('/home')}}" class="menu {{ request()->is('home') ? 'menu--active' : '' }}">
+            <a href="{{route('home')}}" class="menu {{ request()->is('home') ? 'menu--active' : '' }}">
                 <div class="menu__icon"> <i data-feather="home"></i> </div>
                 <div class="menu__title"> Home </div>
             </a>
         </li>
         <li>
-            <a href="{{url('news-list')}}" class="menu {{ request()->is('news-list', 'news-list/news-upload') ? 'menu--active' : '' }}">
+            <a href="javascript:;" class="menu {{ request()->is('news-list', 'news-list/news-upload', 'category') ? 'menu__sub-open' : '' }}">
                 <div class="menu__icon"> <i data-feather="file-text"></i> </div>
-                <div class="menu__title"> Berita </div>
+                <div class="menu__title"> Berita <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
             </a>
-        </li>
-        <li>
-            <a href="{{url('category')}}" class="menu {{ request()->is('category') ? 'menu--active' : '' }}">
-                <div class="menu__icon"> <i data-feather="list"></i> </div>
-                <div class="menu__title"> Kategori </div>
-            </a>
-        </li>
-        <li class="menu__devider my-6"></li>
-        <li>
-            <a href="javascript:;" class="menu">
-                <div class="menu__icon"> <i data-feather="users"></i> </div>
-                <div class="menu__title"> Users <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
-            </a>
-            <ul class="">
+            <ul class="{{ request()->is('news-list', 'news-list/news-upload', 'category') ? 'menu__sub-open' : '' }}">
                 <li>
-                    <a href="{{url('#')}}" class="menu">
-                        <div class="menu__icon"> <i data-feather="activity"></i> </div>
-                        <div class="menu__title"> Submenu 1 </div>
+                    <a href="{{route('news-list')}}" class="menu {{ request()->is('news-list', 'news-list/news-upload') ? 'menu--active' : '' }}">
+                        <div class="menu__icon"> <i data-feather="minus"></i> </div>
+                        <div class="menu__title"> Semua Berita </div>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('#')}}" class="menu">
-                        <div class="menu__icon"> <i data-feather="activity"></i> </div>
-                        <div class="menu__title"> Submenu 2 </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{url('#')}}" class="menu">
-                        <div class="menu__icon"> <i data-feather="activity"></i> </div>
-                        <div class="menu__title"> Submenu 3 </div>
+                    <a href="{{route('category')}}" class="menu {{ request()->is('category') ? 'menu--active' : '' }}">
+                        <div class="menu__icon"> <i data-feather="minus"></i> </div>
+                        <div class="menu__title"> Kategori Berita </div>
                     </a>
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="{{route('layanan')}}" class="menu {{ request()->is('layanan') ? 'menu--active' : '' }}">
+                <div class="menu__icon"> <i data-feather="clipboard"></i> </div>
+                <div class="menu__title"> Layanan </div>
+            </a>
+        </li>
+        <li class="menu__devider my-6"></li>
     </ul>
 </div>
 <!-- END: Mobile Menu -->

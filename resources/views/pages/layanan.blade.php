@@ -1,18 +1,18 @@
 @extends('../layout/side-menu')
 
 @section('subhead')
-    <title>Profile - Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
+    <title>Layanan - Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
 @endsection
 
 @section('breadcrumb')
     <!-- BEGIN: Breadcrumb -->
-    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="{{route('home')}}" class="">Home</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="{{route('profile')}}" class="breadcrumb--active">Profile</a> </div>
+    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="{{route('home')}}" class="">Home</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="{{route('layanan')}}" class="breadcrumb--active">Layanan</a> </div>
     <!-- END: Breadcrumb -->
 @endsection
 
 @section('subcontent')
     <div class="intro-y flex items-center mt-8">
-        <h2 class="text-lg font-medium mr-auto">User Profile</h2>
+        <h2 class="text-lg font-medium mr-auto">Semua Layanan</h2>
     </div>
     <div class="grid grid-cols-12 gap-6">
         @include('../layout/components/profile-menu')

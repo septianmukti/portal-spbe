@@ -50,6 +50,16 @@
             width: 30px;
             height: 30px;
         }
+        .grow img{
+            transition: 1s ease;
+        }
+
+        .grow img:hover{
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+            transition: 1s ease;
+        }
     </style>
 @endsection
 
@@ -100,74 +110,38 @@
                 <div class="col-lg-12">
                     <div class="features-btn">
                         <ul class="nav nav-pills d-flex justify-content-between" id="pills-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">
-                                    <i class="flaticon-responsive"><img src="assets/images/features-shape.png" alt="shape"></i>
+                            <li class="nav-item grow">
+                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                    <img src="assets/images/administrasi.svg" alt="shape"></i>
                                     <span>Administrasi</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pills-2">
-                                    <i class="flaticon-computer-graphic"><img src="assets/images/features-shape.png" alt="shape"></i>
+                            <li class="nav-item grow">
+                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                    <img src="assets/images/layanan-publik.svg" alt="shape"></i>
                                     <span>Layanan Publik</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">
-                                    <i class="flaticon-seo-and-web"><img src="assets/images/features-shape.png" alt="shape"></i>
+                            <li class="nav-item grow">
+                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                    <img src="assets/images/pengaduan.svg" alt="shape"></i>
                                     <span>Pengaduan</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">
-                                    <i class="flaticon-development"><img src="assets/images/features-shape.png" alt="shape"></i>
+                            <li class="nav-item grow">
+                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                    <img src="assets/images/statistik.svg" alt="shape"></i>
                                     <span>Statistik</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a data-target=".bd-example-modal-lg" data-toggle="modal" href="">
-                                    <i class="flaticon-app-development"><img src="assets/images/features-shape.png" alt="shape"></i>
+                            <li class="nav-item grow">
+                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                    <img src="assets/images/perizinan.svg" alt="shape"></i>
                                     <span>Perizinan</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="features-btn">
-                        <ul class="nav nav-pills d-flex justify-content-between" id="pills-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">
-                                    <i class="flaticon-responsive"><img src="assets/images/features-shape.png" alt="shape"></i>
-                                    <span>Administrasi</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pills-2">
-                                    <i class="flaticon-computer-graphic"><img src="assets/images/features-shape.png" alt="shape"></i>
-                                    <span>Layanan Publik</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">
-                                    <i class="flaticon-seo-and-web"><img src="assets/images/features-shape.png" alt="shape"></i>
-                                    <span>Pengaduan</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">
-                                    <i class="flaticon-development"><img src="assets/images/features-shape.png" alt="shape"></i>
-                                    <span>Statistik</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a data-target=".bd-example-modal-lg" data-toggle="modal" href="">
-                                    <i class="flaticon-app-development"><img src="assets/images/features-shape.png" alt="shape"></i>
-                                    <span>Perizinan</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
                 </div>
             </div>
         </div>
