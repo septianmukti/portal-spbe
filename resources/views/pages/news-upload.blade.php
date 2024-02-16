@@ -6,18 +6,6 @@
 
 @section('custom-css')
     <link href="{{ asset('dist/css/quill.snow.css') }}" rel="stylesheet">
-    <style>
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .preview-upload {
-            display:none;
-            height:400px;
-            object-fit: contain;
-        }
-    </style>
 @endsection
 
 @section('breadcrumb')

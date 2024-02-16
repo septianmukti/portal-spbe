@@ -32,10 +32,14 @@
             <tbody>
                     <tr>
                         <td class="border-b">
-                            <div class="font-medium whitespace-normal">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
+                            <div class="font-medium whitespace-normal line-clamp-4">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
                         </td>
                         <td class="text-center border-b">Kategori</td>
-                        <td class="text-center border-b">Slug</td>
+                        <td class="text-center border-b">
+                            <div class="line-clamp-4">
+                                Slug
+                            </div>
+                        </td>
                         <td class="text-center border-b">
                             <div class="flex sm:justify-center">
                                 <div class="intro-x w-10 h-10 image-fit">
@@ -62,7 +66,7 @@
                     </tr>
                     <tr>
                         <td class="border-b">
-                            <div class="font-medium whitespace-normal">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
+                            <div class="font-medium whitespace-normal line-clamp-4">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
                         </td>
                         <td class="text-center border-b">Kategori</td>
                         <td class="text-center border-b">Slug</td>

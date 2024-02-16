@@ -14,8 +14,9 @@ class LayananController extends Controller
 
     public function view()
     {
-        $layanan = Layanan::all();
-        return view('pages.layanan', ['layanan' => $layanan]);
+        // $layanan = Layanan::all();
+        // return view('pages.layanan', ['layanan' => $layanan]);
+        return view('pages.layanan');
     }
 
     public function post()

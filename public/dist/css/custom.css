@@ -1,0 +1,18 @@
+.line-clamp-4 {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.preview-upload {
+    display: none;
+    height: 400px;
+    object-fit: contain;
+}

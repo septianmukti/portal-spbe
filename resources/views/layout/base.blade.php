@@ -15,6 +15,7 @@
 
     <!-- BEGIN: CSS Assets-->
     <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}" />
+    <link rel="stylesheet" href="{{ asset('dist/css/custom.css') }}" />
     <!-- END: CSS Assets-->
     @yield('css')
 </head>
