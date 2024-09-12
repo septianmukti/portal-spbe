@@ -35,5 +35,10 @@ class WebController extends Controller
     {
         return view('web.manajemen-spbe');
     }
-    
+
+    public function layananSPBE()
+    {
+        return view('web.layanan-spbe');
+    }
+
 }

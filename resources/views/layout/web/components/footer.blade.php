@@ -23,7 +23,7 @@
                                     <li><a href="{{route('kebijakan.spbe')}}">Kebijakan SPBE</a></li>
                                     <li><a href="{{route('tata.kelola.spbe')}}">Tata Kelola SPBE</a></li>
                                     <li><a href="{{route('manajemen.spbe')}}">Manajemen SPBE</a></li>
-                                    <li><a href="#">Layanan SPBE</a></li>
+                                    <li><a href="{{route('layanan.spbe')}}">Layanan SPBE</a></li>
                                 </ul>
                             </div>
                             <div class="item mr-100">

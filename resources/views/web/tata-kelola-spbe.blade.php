@@ -42,7 +42,7 @@
                     <div class="blog-details__main">
                         <div class="blog-details__content">
                             <div class="blog-one__meta">
-                                <a href="#"><i class="fa fa-clock-o"></i> 20 Feb 2023</a>
+                                <a href="#"><i class="fa fa-clock-o"></i> 12 September 2024</a>
                             </div><!-- /.blog-one__meta -->
                             <h3>Tata Kelola SPBE</h3>
                             
@@ -194,8 +194,7 @@
                         </div><!-- /.blog-details__content -->
                         <div class="blog-details__meta">
                             <div class="blog-details__tags">
-                                <span>Kategori: </span> <a href="#">Business,</a> <a href="#">Agency,</a> <a
-                                    href="#">Technology</a>
+                                
                             </div><!-- /.blog-details__tags -->
                             <div class="blog-details__share">
                                 <ul>

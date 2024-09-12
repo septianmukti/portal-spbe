@@ -1,7 +1,7 @@
 @extends('../layout/web/main')
 
 @section('title')
-    <title>Tata Kelola SPBE | Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
+    <title>Manajemen SPBE | Portal Sistem Pemerintahan Berbasis Elektronik (SPBE) Pemerintah Kabupaten Madiun</title>
 @endsection
 
 @section('content')
@@ -38,7 +38,7 @@
                     <div class="blog-details__main">
                         <div class="blog-details__content">
                             <div class="blog-one__meta">
-                                <a href="#"><i class="fa fa-clock-o"></i> 20 Feb 2023</a>
+                                <a href="#"><i class="fa fa-clock-o"></i> 12 September 2024</a>
                             </div><!-- /.blog-one__meta -->
                             <h3>Manajemen SPBE</h3>   
                             <h4>Manajemen Risiko SPBE</h4>
@@ -68,12 +68,82 @@
                                 2. Manajemen aset teknologi informasi dan komunikasi bertujuan untuk menjamin ketersediaan dan optimalisasi pemanfaatan aset teknologi informasi dan komunikasi dalam SPBE.<br>
                                 3. Aset TIK mencakup perangkat lunak, perangkat keras, data dan informasi, infrastruktur, SDM, lisensi, data, SOP, outsource services, dan IT asset register.
                             </p>
-
+                            <br>
+                            <h4>Penerapan Kompetensi Sumber Daya Manusia</h4>
+                            <p>
+                                1. Manajemen Sumber Daya Manusia dilakukan melalui serangkaian proses perencanaan, pengembangan, pembinaan, dan pendayagunaan Sumber Daya Manusia dalam SPBE.<br>
+                                2. Manajemen Sumber Daya Manusia bertujuan untuk menjamin keberlangsungan dan peningkatan mutu layanan dalam SPBE.<br>
+                                3. Manajemen Sumber Daya Manusia (SDM) SPBE termasuk didalamnya kegiatan peningkatan kompetensi Sumber Daya Manusia SPBE dan promosi literasi SPBE.
+                            </p>
+                            <br>
+                            <h4>Manajemen Pengetahuan SPBE</h4>
+                            <p>
+                                Manajemen Pengetahuan adalah proses yang dilakukan untuk mendokumentasi pengalaman dan pengetahuan dalam perencanaan, implementasi, dan evaluasi SPBE guna meningkatkan kualitas Layanan SPBE dan mendukung proses pengambilan keputusan dalam SPBE.
+                            </p>
+                            <br>
+                            <h4>Manajemen Perubahan SPBE</h4>
+                            <p>
+                                1. Manajemen Perubahan dilakukan melalui serangkaian proses perencanaan, analisis, pengembangan, implementasi, pemantauan dan evaluasi terhadap perubahan SPBE.<br>
+                                2. Manajemen Perubahan bertujuan untuk menjamin keberlangsungan dan meningkatkan kualitas Layanan SPBE melalui pengendalian perubahan yang terjadi dalam SPBE.<br>
+                                3. Lingkup Manajemen Perubahan SPBE:
+                                <li class="ml-3">Perubahan Aplikasi;</li>
+                                <li class="ml-3">Perubahan Perangkat Keras;</li>
+                                <li class="ml-3">Perubahan Perangkat Lunak;</li>
+                                <li class="ml-3">Perubahan Infrastruktur;</li>
+                                <li class="ml-3">Perubahan Proses Bisnis;</li>
+                                <li class="ml-3">Perubahan Lingkungan Organisasi;</li>
+                                <li class="ml-3">Perubahan Layanan;</li>
+                                <li class="ml-3">Perubahan Data;</li>
+                                <li class="ml-3">Perubahan Keamanan;</li>
+                                <li class="ml-3">Perubahan Arsitektur.</li>
+                            </p>
+                            <br>
+                            <h4>Manajemen Layanan SPBE</h4>
+                            <p>
+                                1. Manajemen Layanan merupakan serangkaian proses pelayanan kepada pengguna, pengoperasian layanan, dan pengelolaan Aplikasi SPBE agar Layanan SPBE dapat berjalan berkesinambungan dan berkualitas.<br>
+                                2. Manajemen Layanan bertujuan untuk menjamin keberlangsungan dan meningkatkan kualitas Layanan SPBE kepada Pengguna SPBE.<br>
+                                3. Penyelenggaraan Manajemen Layanan SPBE ditujukan untuk memberikan dukungan terhadap layanan publik berbasis elektronik dan layanan administrasi pemerintahan berbasis elektronik agar Layanan SPBE tersebut dapat berjalan secara berkesinambungan, berkualitas, responsif, dan adaptif.<br>
+                                4. Penyelenggaraan Manajemen Layanan dapat diwujudkan dengan membangun portal pusat layanan untuk menjalankan proses:
+                                <li class="ml-3">Pengelolaan keluhan, gangguan, masalah, permintaan, dan perubahan Layanan SPBE dari pengguna;</li>
+                                <li class="ml-3">Pendayagunaan dan pemeliharaan Infrastruktur SPBE dan Aplikasi SPBE; dan</li>
+                                <li class="ml-3">Pembangunan dan pengembangan aplikasi yang berpedoman pada metodologi pembangunan dan pengembangan aplikasi.</li>
+                            </p>
+                            <br>
+                            <br>
+                            <br>
+                            <h4>Audit Infrastruktur SPBE</h4>
+                            <p>
+                                1. Audit Infrastruktur SPBE Instansi Pusat dan Pemerintah Daerah dilaksanakan berdasarkan standar dan tata cara pelaksanaan Audit Infrastruktur SPBE.<br>
+                                2. Audit Infrastruktur SPBE meliputi pemeriksaan hal pokok teknis antara lain:
+                                <li class="ml-3">Penerapan tata kelola dan manajemen infrastruktur SPBE;</li>
+                                <li class="ml-3">Infrastruktur SPBE;</li>
+                                <li class="ml-3">Kinerja infrastruktur SPBE yang dihasilkan; dan</li>
+                                <li class="ml-3">Aspek infrastruktur SPBE lainnya.</li>
+                            </p>
+                            <br>
+                            <h4>Audit Aplikasi SPBE</h4>
+                            <p>
+                                1. Audit Aplikasi SPBE Instansi Pusat dan Pemerintah Daerah dilaksanakan berdasarkan standar dan tata cara pelaksanaan Audit Aplikasi SPBE.<br>
+                                2. Audit Aplikasi SPBE terdiri atas:
+                                <li class="ml-3">Audit Aplikasi Umum</li>
+                                <li class="ml-3">Audit Aplikasi Khusus</li>
+                                3. Standar/pedoman audit dapat berupa standar internal Instansi Pusat/Pemerintah Daerah, standar/pedoman nasional, atau standar/pedoman internasional.<br>
+                                4. Audit Keamanan SPBE Instansi Pusat dan Pemerintah Daerah dilaksanakan berdasarkan standar dan tata cara pelaksanaan Audit Keamanan SPBE.
+                            </p>
+                            <br>
+                            <h4>Audit Keamanan SPBE</h4>
+                            <p>
+                                1. Audit Keamanan SPBE Instansi Pusat dan Pemerintah Daerah dilaksanakan berdasarkan standar dan tata cara pelaksanaan Audit Keamanan SPBE.<br>
+                                2. Audit Keamanan SPBE terdiri atas:
+                                <li class="ml-3">Audit Keamanan Aplikasi; dan</li>
+                                <li class="ml-3">Audit Keamanan Infrastruktur.</li>
+                                3. Standar/pedoman audit dapat berupa standar internal Instansi Pusat/Pemerintah Daerah, standar/pedoman nasional, atau standar/pedoman internasional.
+                            </p>
+                            <br>
                         </div><!-- /.blog-details__content -->
                         <div class="blog-details__meta">
                             <div class="blog-details__tags">
-                                <span>Kategori: </span> <a href="#">Business,</a> <a href="#">Agency,</a> <a
-                                    href="#">Technology</a>
+                                
                             </div><!-- /.blog-details__tags -->
                             <div class="blog-details__share">
                                 <ul>

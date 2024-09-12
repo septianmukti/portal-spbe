@@ -28,6 +28,7 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/kebijakan-spbe', 'kebijakanSPBE')->name('kebijakan.spbe');
     Route::get('/tata-kelola-spbe', 'tataKelolaSPBE')->name('tata.kelola.spbe');
     Route::get('/manajemen-spbe', 'manajemenSPBE')->name('manajemen.spbe');
+    Route::get('/layanan-spbe', 'layananSPBE')->name('layanan.spbe');
 
 });
 
