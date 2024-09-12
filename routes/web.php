@@ -25,6 +25,10 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/berita', 'newsLayout')->name('news-layout');
     Route::get('/blog-single', 'single')->name('single-blog');
+    Route::get('/kebijakan-spbe', 'kebijakanSPBE')->name('kebijakan.spbe');
+    Route::get('/tata-kelola-spbe', 'tataKelolaSPBE')->name('tata.kelola.spbe');
+    Route::get('/manajemen-spbe', 'manajemenSPBE')->name('manajemen.spbe');
+
 });
 
 Route::controller(AuthController::class)->group(function () {

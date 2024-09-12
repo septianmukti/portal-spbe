@@ -26,9 +26,9 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Domain SPBE</a>
                                             <ul class="sub-menu">
-                                                <li><a href="#">Kebijakan SPBE</a></li>
-                                                <li><a href="#">Tata Kelola SPBE</a></li>
-                                                <li><a href="#">Manajemen SPBE</a></li>
+                                                <li><a href="{{route('kebijakan.spbe')}}">Kebijakan SPBE</a></li>
+                                                <li><a href="{{route('tata.kelola.spbe')}}">Tata Kelola SPBE</a></li>
+                                                <li><a href="{{route('manajemen.spbe')}}">Manajemen SPBE</a></li>
                                                 <li><a href="#">Layanan SPBE</a></li>
                                             </ul>
                                         </li>

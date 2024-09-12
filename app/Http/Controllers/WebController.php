@@ -20,5 +20,20 @@ class WebController extends Controller
     {
         return view('web.blog-single');
     }
+
+    public function kebijakanSPBE()
+    {
+        return view('web.kebijakan-spbe');
+    }
+
+    public function tataKelolaSPBE()
+    {
+        return view('web.tata-kelola-spbe');
+    }
+
+    public function manajemenSPBE()
+    {
+        return view('web.manajemen-spbe');
+    }
     
 }
