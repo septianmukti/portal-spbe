@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link href="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.1.6/css/dataTables.dataTables.css" rel="stylesheet">
 
     <style>
         .clearfix:after {
@@ -60,6 +60,18 @@
             transform: scale(1.2);
             transition: 1s ease;
         }
+
+        table {
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+        }
+
+        div.dataTables_info {
+            color: white !important;
+            background-color: black;
+        }
     </style>
 @endsection
 
@@ -111,31 +123,31 @@
                     <div class="features-btn">
                         <ul class="nav nav-pills d-flex justify-content-between" id="pills-tab" role="tablist">
                             <li class="nav-item grow">
-                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                <a class="nav-link" data-target=".modal-administrasi" data-toggle="modal" href="">
                                     <img src="assets/images/administrasi.svg" alt="shape"></i>
                                     <span>Administrasi</span>
                                 </a>
                             </li>
                             <li class="nav-item grow">
-                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                <a class="nav-link" data-target=".modal-layanan-publik" data-toggle="modal" href="">
                                     <img src="assets/images/layanan-publik.svg" alt="shape"></i>
                                     <span>Layanan Publik</span>
                                 </a>
                             </li>
                             <li class="nav-item grow">
-                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                <a class="nav-link" data-target=".modal-pengaduan" data-toggle="modal" href="">
                                     <img src="assets/images/pengaduan.svg" alt="shape"></i>
                                     <span>Pengaduan</span>
                                 </a>
                             </li>
                             <li class="nav-item grow">
-                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                <a class="nav-link" data-target=".modal-statistik" data-toggle="modal" href="">
                                     <img src="assets/images/statistik.svg" alt="shape"></i>
                                     <span>Statistik</span>
                                 </a>
                             </li>
                             <li class="nav-item grow">
-                                <a class="nav-link" data-target=".bd-example-modal-lg" data-toggle="modal" href="">
+                                <a class="nav-link" data-target=".modal-perizinan" data-toggle="modal" href="">
                                     <img src="assets/images/perizinan.svg" alt="shape"></i>
                                     <span>Perizinan</span>
                                 </a>
@@ -146,8 +158,162 @@
             </div>
         </div>
     </section>
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <!-- MODAL ADMINISTRASI -->
+    <div class="modal fade modal-administrasi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Daftar Aplikasi Administrasi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                    <table id="administrasi" class="display compact" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th width="30%" class="text-center">Nama Aplikasi</th>
+                                    <th>Deskripsi</th>
+                                    <th width="15%" class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center"><b>TAUVAL SPBE</b></td>
+                                    <td>Aplikasi penilaiaan internal SPBE</td>
+                                    <td>
+                                        <a class="btn btn-outline-info btn-sm" href="https://dinaskom.info/tauval" type="button" target="_blank">Buka Link</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><b>SRIKANDI</b></td>
+                                    <td>Aplikasi persuratan</td>
+                                    <td>
+                                        <a class="btn btn-outline-info btn-sm" href="https://srikandi.arsip.go.id/" type="button" target="_blank">Buka Link</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL LAYANAN PUBLIK -->
+    <div class="modal fade modal-layanan-publik" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Daftar Aplikasi Layanan Publik</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                    <table id="layanan-publik" class="display compact" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th width="30%" class="text-center">Nama Aplikasi</th>
+                                    <th>Deskripsi</th>
+                                    <th width="15%" class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center"><b>SENOPATI</b></td>
+                                    <td>Aplikasi Sistem Online Pelayanan Kependudukan Terintegrasi.</td>
+                                    <td>
+                                        <a class="btn btn-outline-info btn-sm" href="https://senopati.dukcapil.madiunkab.go.id/" type="button" target="_blank">Buka Link</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL PENGADUAN -->
+    <div class="modal fade modal-pengaduan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Daftar Aplikasi Pengaduan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                    <table id="pengaduan" class="display compact" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th width="30%" class="text-center">Nama Aplikasi</th>
+                                    <th>Deskripsi</th>
+                                    <th width="15%" class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center"><b>LAPOR!</b></td>
+                                    <td>Layanan Aspirasi dan Pengaduan Online Rakyat</td>
+                                    <td>
+                                        <a class="btn btn-outline-info btn-sm" href="https://www.lapor.go.id/" type="button" target="_blank">Buka Link</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL STATISTIK -->
+    <div class="modal fade modal-statistik" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Daftar Aplikasi Statistik</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                    <table id="statistik" class="display compact" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th width="30%" class="text-center">Nama Aplikasi</th>
+                                    <th>Deskripsi</th>
+                                    <th width="15%" class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center"><b>SATU DATA</b></td>
+                                    <td>Portal Satu Data Kabupaten Madiun</td>
+                                    <td>
+                                        <a class="btn btn-outline-info btn-sm" href="https://data.madiunkab.go.id/" type="button" target="_blank">Buka Link</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><b>AKSATA</b></td>
+                                    <td>Layanan untuk mengetahui harga pasar terupdate</td>
+                                    <td>
+                                        <a class="btn btn-outline-info btn-sm" href="https://aksata.madiunkab.go.id/" type="button" target="_blank">Buka Link</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL PERIZINAN -->
+    <div class="modal fade modal-perizinan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -158,69 +324,21 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                    <table id="app" class="table table-striped table-bordered" style="width:100%">
+                    <table id="perizinan" class="display compact" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
+                                    <th width="30%" class="text-center">Nama Aplikasi</th>
+                                    <th>Deskripsi</th>
+                                    <th width="15%" class="text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                </tr>
-                                <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                </tr>
-                                <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                </tr>
-                                <tr>
-                                    <td>Shad Decker</td>
-                                    <td>Regional Director</td>
-                                    <td>Edinburgh</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
+                                    <td class="text-center"><b>Si-Pedalrum</b></td>
+                                    <td>Sistem Informasi Pengendalian Pembangunan Perumahan</td>
+                                    <td>
+                                        <a class="btn btn-outline-info btn-sm" href="https://sipedalrum.madiunkab.go.id/" type="button" target="_blank">Buka Link</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -238,7 +356,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-thumb wow fadeInLeft" data-wow-duration="1500ms">
-                        <img src="assets/images/bupati.jpeg" alt="" style="width: 75%; height: auto;">
+                        <img src="assets/images/pj-bupati.png" alt="" style="width: 75%; height: auto;">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -309,98 +427,6 @@
         <div class="business-shape"></div>
     </section>
     <!--====== BUSINESS PART ENDS ======-->
-
-    <!--====== CUSTOMERS PART START ======-->
-    <section class="customers-area pt-120 pb-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="customers-thumb wow fadeInLeft mt-150" data-wow-duration="1500ms">
-                        <img src="assets/images/document-search.svg" alt="list" width="500px" height="500px">
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-9">
-                    <div class="section-title">
-                        <span>Dokumen SPBE</span>
-                        <h3 class="title">Kabupaten Madiun</h3>
-                    </div>
-                    <div class="customers-content">
-                        <table id="search" class="table table-striped table-bordered" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                </tr>
-                                <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                </tr>
-                                <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                </tr>
-                                <tr>
-                                    <td>Shad Decker</td>
-                                    <td>Regional Director</td>
-                                    <td>Edinburgh</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="customers-shape text-right">
-            <img src="assets/images/customers-shape.png" alt="shape">
-        </div>
-        <div class="customers-shape-1"></div>
-    </section>
-    <!--====== CUSTOMERS PART ENDS ======-->
 
     <!--====== BLOG PART START ======-->
     <section id="news" class="blog-area">
@@ -511,8 +537,15 @@
 @endsection
 
 @section('script')
-    <script src="https://cdn.datatables.net/v/bs4/dt-1.13.8/datatables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.6/js/dataTables.js"></script>
     <script>
-        new DataTable('#search, #app');
+        $(document).ready(function() {
+            $('#administrasi, #layanan-publik, #pengaduan, #statistik, #perizinan').DataTable({
+                "language": {
+                    emptyTable: "Tidak ada data",
+                    "sSearch": "Pencarian"
+                }
+            })
+        });
     </script>
 @endsection
